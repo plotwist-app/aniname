@@ -1,0 +1,16 @@
+{
+  "name": "animator",
+  "version": "1.0.0",
+  "description": "A way to find an anime that you forget the name",
+  "main": "lib/helloWorld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "status-451",
+  "license": "MIT",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "eslint": "^8.57.0",
+    "serverless-cloudflare-workers": "1.2.0"
+  }
+}
