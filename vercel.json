@@ -1,16 +1,15 @@
 {
   "version": 2,
-  "name": "aniname",
   "builds": [
     {
-      "src": "app.js",
+      "src": "api/hello.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/app.js"
+      "dest": "api/hello.js"
     }
   ]
 }
