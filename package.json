@@ -2,12 +2,12 @@
   "name": "animator",
   "version": "1.0.0",
   "description": "A way to find an anime that you forget the name",
-  "main": "lib/helloWorld.js",
+  "main": "api/main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "node dist/api/hello.js",
-    "dev": "tsc --watch & node dist/api/hello.js"
+    "start": "node dist/api/main.ts",
+    "dev": "tsc --watch & node dist/api/main.ts"
   },
   "author": "status-451",
   "license": "MIT",
