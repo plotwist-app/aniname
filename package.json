@@ -16,6 +16,10 @@
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^20.11.30",
     "@vercel/node": "^3.0.24",
-    "eslint": "^8.57.0"
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "openai": "^4.29.2"
   }
 }
