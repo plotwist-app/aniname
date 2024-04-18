@@ -5,7 +5,7 @@ export function createNewMessageFunction(
   rawMessage: string,
 ) {
   const newMessage: Message = {
-    role: 'system',
+    role: 'assistant',
     content: rawMessage,
   }
 
