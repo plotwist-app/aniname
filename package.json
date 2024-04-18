@@ -20,6 +20,8 @@
     "typescript": "^5.4.3"
   },
   "dependencies": {
-    "openai": "^4.29.2"
+    "dotenv": "^16.4.5",
+    "openai": "^4.29.2",
+    "zod": "^3.22.4"
   }
 }

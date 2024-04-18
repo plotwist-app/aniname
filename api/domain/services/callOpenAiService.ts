@@ -1,7 +1,9 @@
-import console from 'console'
+import OpenAI from 'openai'
+
+import { env } from '../../env/index.js'
 import { Message } from '../../@types/message.js'
 
-import OpenAI from 'openai'
+const apiKey = env.OPEN_AI_KEY
 
 const openai = new OpenAI({
   apiKey, // This is the default and can be omitted
@@ -9,7 +11,7 @@ const openai = new OpenAI({
 
 export async function callOpenAiService(incomingMessages: Message[]) {
   const defaultMessage: Message = {
-    role: 'system',
+    role: 'assistant',
     content: 'Your objective is guess an anime name based on description',
   }
 
