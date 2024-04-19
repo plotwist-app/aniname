@@ -21,9 +21,7 @@ export async function guessController(req: VercelRequest, res: VercelResponse) {
     return
   }
 
-  res.setHeader('Content-Type', 'application/json')
-
   res.status(200).json({
-    message: response,
+    messages: response,
   })
 }
