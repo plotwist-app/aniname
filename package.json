@@ -2,8 +2,6 @@
   "name": "animator",
   "version": "1.1.0",
   "description": "A way to find an anime that you forget the name",
-  "main": "api/main.ts",
-  "author": "status-451",
   "license": "MIT",
   "type": "module",
   "devDependencies": {
