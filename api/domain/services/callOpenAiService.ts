@@ -22,5 +22,5 @@ export async function callOpenAiService(incomingMessages: Message[]) {
     model: 'gpt-4-turbo',
   })
 
-  console.log(completion.choices[0].message.content)
+  return completion.choices[0].message.content
 }
