@@ -9,7 +9,10 @@
   "routes": [
     {
       "src": "api/main",
-      "dest": "api/main.ts"
+      "dest": "api/main.ts",
+      "headers": {
+        "Content-Type": "application/json"
+      }
     }
   ]
 }
