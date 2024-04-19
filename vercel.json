@@ -10,6 +10,9 @@
     {
       "src": "api/main",
       "dest": "api/main.ts",
+      "methods": [
+        "POST"
+      ],
       "headers": {
         "Content-Type": "application/json"
       }
