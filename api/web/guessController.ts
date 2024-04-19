@@ -8,8 +8,6 @@ interface BodyParams {
 }
 
 export async function guessController(req: VercelRequest, res: VercelResponse) {
-  console.log(req)
-
   const body: BodyParams = req.body
 
   const response = await guessAnimeService(body.messages)
