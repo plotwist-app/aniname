@@ -1,12 +1,11 @@
 import OpenAI from 'openai'
 
-import { env } from '../../env/index.js'
 import { Message } from '../../@types/message.js'
 
-const apiKey = env.OPEN_AI_KEY
+const apiKey = process.env.OPEN_AI_KEY
 
 const openai = new OpenAI({
-  apiKey, // This is the default and can be omitted
+  apiKey,
 })
 
 export async function callOpenAiService(incomingMessages: Message[]) {
