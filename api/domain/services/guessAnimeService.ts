@@ -1,6 +1,30 @@
-import { Message } from '../../@types/message.js'
-import { callOpenAiService } from './callOpenAiService.js'
+import OpenAI from 'openai'
 
-export async function guessAnimeService(messages: Message[]) {
-  return await callOpenAiService(messages)
+import { Message } from '../../@types/message.js'
+
+const apiKey = process.env.OPEN_AI_KEY
+
+const openai = new OpenAI({
+  apiKey,
+})
+
+export async function guessAnimeService(incomingMessages: Message[]) {
+  const defaultMessage: Message = {
+    role: 'assistant',
+    content: 'Your objective is guess an anime name based on description',
+  }
+
+  const messages = [defaultMessage, ...incomingMessages]
+
+  const { choices } = await openai.chat.completions.create({
+    messages,
+    model: 'gpt-4-turbo',
+  })
+
+  const response: Message = {
+    role: 'assistant',
+    content: choices[0].message.content,
+  }
+
+  return [...messages, response]
 }
