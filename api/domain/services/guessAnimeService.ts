@@ -21,10 +21,12 @@ export async function guessAnimeService(incomingMessages: Message[]) {
     model: 'gpt-4-turbo',
   })
 
+  const content = choices[0].message.content!.replace(/[/*\\]/g, '')
+
   const response: Message = {
     role: 'assistant',
-    content: choices[0].message.content,
+    content,
   }
 
-  return [...messages, response]
+  return [...incomingMessages, response]
 }
